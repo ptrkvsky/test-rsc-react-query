@@ -5,7 +5,6 @@ export async function fetchTodo(id: string | number) {
     const response = await fetch(`${process.env.ENDPOINT}/todos/${id}`, {
       method: 'GET',
       headers: { 'content-type': 'application/json' },
-      next: { revalidate: 0 },
     });
 
     if (response.ok) {
