@@ -7,10 +7,7 @@ import { fetchTodos } from './todos/api/fetchTodos';
 
 export default async function Home() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(['todos'], fetchTodos, {
-    cacheTime: 0,
-    staleTime: 0,
-  });
+  await queryClient.prefetchQuery(['todos'], fetchTodos);
   const dehydratedState = dehydrate(queryClient);
 
   return (
