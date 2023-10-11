@@ -1,6 +1,6 @@
 import styles from './page.module.css';
 import getQueryClient from '@/app/utils/getQueryClient';
-import { dehydrate } from '@tanstack/react-query';
+import { dehydrate } from '@tanstack/query-core';
 import { Hydrate } from './utils/HydrateClient';
 import { TodosList } from './todos/components/TodosList/TodosList';
 import { fetchTodos } from './todos/api/fetchTodos';
